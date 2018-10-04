@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service id="no_bugfix_to_disable_non_existing_variants.decorators.storefront_configurator_gateway"
+                 class="NoBugfixToDisableNonExistingVariants\Decorators\StorefrontConfiguratorGateway"
+                 decorates="shopware_storefront.configurator_gateway">
+            <argument type="service" id="no_bugfix_to_disable_non_existing_variants.decorators.storefront_configurator_gateway.inner"/>
+            <argument type="service" id="dbal_connection"/>
+            <argument type="service" id="config"/>
+        </service>
+
+        <service id="no_bugfix_to_disable_non_existing_variants.decorators.storefront_configurator_service"
+                 class="NoBugfixToDisableNonExistingVariants\Decorators\StorefrontConfiguratorService"
+                 decorates="shopware_storefront.configurator_service">
+            <argument type="service" id="no_bugfix_to_disable_non_existing_variants.decorators.storefront_configurator_service.inner"/>
+            <argument type="service" id="shopware_storefront.configurator_gateway"/>
+        </service>
+    </services>
+</container>

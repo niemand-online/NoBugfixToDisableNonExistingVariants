@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/shopware/5.4/engine/Shopware/Components/Plugin/schema/plugin.xsd">
+    <label lang="de">Deaktiviere nicht existierende Varianten</label>
+    <label lang="en">Deactivate not existing variants</label>
+    <version>1.0.0</version>
+    <license>MIT</license>
+    <link>https://github.com/niemand-online/NoBugfixToDisableNonExistingVariants</link>
+    <author>niemand.online</author>
+    <compatibility minVersion="5.4.0"/>
+</plugin>
